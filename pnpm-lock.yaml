@@ -35,6 +35,9 @@ importers:
 
   apps/web:
     dependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.5.5
+        version: 0.5.5
       '@outreach/agents':
         specifier: workspace:^
         version: link:../../packages/agents
@@ -53,6 +56,9 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      drizzle-orm:
+        specifier: ^0.45.2
+        version: 0.45.2(@electric-sql/pglite@0.5.5)(@opentelemetry/api@1.9.1)(@types/pg@8.23.1)(pg@8.23.0)
       inngest:
         specifier: ^4.18.1
         version: 4.18.1(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.1))(next@15.5.23(@opentelemetry/api@1.9.1)(@playwright/test@1.62.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react@19.2.8)(typescript@5.9.3)(zod@4.4.3)
@@ -62,6 +68,9 @@ importers:
       next:
         specifier: '15'
         version: 15.5.23(@opentelemetry/api@1.9.1)(@playwright/test@1.62.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      pg:
+        specifier: ^8.23.0
+        version: 8.23.0
       react:
         specifier: '19'
         version: 19.2.8
@@ -99,6 +108,9 @@ importers:
       tailwindcss:
         specifier: ^4.3.3
         version: 4.3.3
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
 
   packages/agents:
     dependencies:
@@ -120,6 +132,13 @@ importers:
       zod:
         specifier: ^4.4.3
         version: 4.4.3
+    devDependencies:
+      '@types/node':
+        specifier: ^26.2.0
+        version: 26.2.0
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
 
   packages/db:
     dependencies:
@@ -151,6 +170,9 @@ importers:
       tsx:
         specifier: ^4.23.12
         version: 4.23.12
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
 
   packages/email:
     dependencies:
@@ -170,15 +192,28 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@types/node':
+        specifier: ^26.2.0
+        version: 26.2.0
       '@types/react':
         specifier: ^19.2.18
         version: 19.2.18
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
 
   packages/env:
     dependencies:
       zod:
         specifier: ^4.4.3
         version: 4.4.3
+    devDependencies:
+      '@types/node':
+        specifier: ^26.2.0
+        version: 26.2.0
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
 
   packages/sites:
     dependencies:
@@ -201,6 +236,9 @@ importers:
       '@types/react-dom':
         specifier: ^19.2.4
         version: 19.2.4(@types/react@19.2.18)
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
 
 packages:
 

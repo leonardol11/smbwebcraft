@@ -21,5 +21,9 @@
     "@outreach/env": "workspace:^",
     "@outreach/sites": "workspace:^",
     "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "typescript": "^5.9.3"
   }
 }

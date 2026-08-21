@@ -13,12 +13,14 @@ const schema = z.object({
   PROVIDER_MODE: z.enum(["fake", "live"]).default("fake"),
 
   GOOGLE_PLACES_API_KEY: z.string().optional(),
+  GOOGLE_MAPS_EMBED_KEY: z.string().optional(),
   RESEND_API_KEY: z.string().optional(),
   RESEND_WEBHOOK_SECRET: z.string().optional(),
   ANTHROPIC_API_KEY: z.string().optional(),
   STRIPE_SECRET_KEY: z.string().optional(),
   STRIPE_WEBHOOK_SECRET: z.string().optional(),
   STRIPE_PAYMENT_LINK_URL: z.string().url().optional(),
+  STRIPE_CUSTOMER_PORTAL_URL: z.string().url().optional(),
   HUNTER_API_KEY: z.string().optional(),
   CLOUDFLARE_API_TOKEN: z.string().optional(),
   CLOUDFLARE_ACCOUNT_ID: z.string().optional(),
@@ -26,9 +28,14 @@ const schema = z.object({
 
   SENDING_DOMAIN: z.string().default("mail.example.com"),
   SENDER_NAME: z.string().default("Outreach"),
+  /** First name used to sign every email ("Best,\n<name>"). */
+  SENDER_FIRST_NAME: z.string().default("Sam"),
+  /** One-sentence self-introduction in the Day 0 email. Keep it honest. */
+  SENDER_INTRO: z.string().default("I build simple websites for local businesses."),
   SENDER_LOCAL_PART: z.string().default("hello"),
   PHYSICAL_ADDRESS: z.string().default("123 Example Street, Anytown, ST 00000"),
   CLIENT_SITES_DOMAIN: z.string().default("sites.example.com"),
+  CLIENT_SITES_PROJECT_PREFIX: z.string().default("site"),
   ALERT_EMAIL: z.string().email().optional(),
 });
 
@@ -43,6 +50,7 @@ const LIVE_REQUIRED: (keyof Env)[] = [
   "STRIPE_SECRET_KEY",
   "STRIPE_WEBHOOK_SECRET",
   "STRIPE_PAYMENT_LINK_URL",
+  "STRIPE_CUSTOMER_PORTAL_URL",
   "HUNTER_API_KEY",
   "CLOUDFLARE_API_TOKEN",
   "CLOUDFLARE_ACCOUNT_ID",
