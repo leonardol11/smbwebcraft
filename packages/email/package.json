@@ -1,0 +1,22 @@
+{
+  "name": "@outreach/email",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@outreach/env": "workspace:^",
+    "@react-email/render": "^2.1.0",
+    "react": "19",
+    "resend": "^6.21.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18"
+  }
+}
